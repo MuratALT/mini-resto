@@ -21,7 +21,7 @@
                 ?>
                 <li><a href="../Controller/admin_panel.php">Panel administrateur</a></li>
                 <li>Mes réservations</li>
-                <li>Réserver une table</li>
+                <li><a href="../Controller/user_reserv_table.php">Réserver une table</a></li>
             </ul>
         </nav>
 

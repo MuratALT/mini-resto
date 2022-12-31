@@ -63,3 +63,18 @@ table td, table th {
 table {
     margin: 20px auto;
 }
+
+table tr {
+    padding: 10px;
+}
+
+#button_reserv {
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 50px;
+}
