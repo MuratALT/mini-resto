@@ -63,4 +63,18 @@
         }
     }
 
+    function getTableIdByUser($id_user): array {
+        include("../connexion.php");
+        $req = "SELECT table_id FROM RESERVATION WHERE user_id = :id_user";
+
+        $res = $db->prepare($req);
+
+        $res->bindValue(":id_user", $id_user);
+
+        $res->execute();
+
+        $reservation = $res->fetch(PDO::FETCH_ASSOC);
+
+        return $reservation;
+    }
 ?>

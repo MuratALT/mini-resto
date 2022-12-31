@@ -78,3 +78,13 @@ table tr {
     border-radius: 20px;
     margin: 50px;
 }
+
+#div_ma_reservation {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
