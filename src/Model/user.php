@@ -1,5 +1,5 @@
 <?php
-    function addUser($nom, $prenom, $date_naissance, $email, $password) {
+    function addUser($nom, $prenom, $date_naissance, $email, $password): void {
         include_once("../connexion.php");
         $req = "INSERT INTO UTILISATEUR (nom, prenom, date_naissance, mail, password) VALUES (:nom, :prenom, :date_naissance, :mail, :password)";
 
@@ -12,5 +12,25 @@
         $res->bindValue(":password", password_hash($password, PASSWORD_DEFAULT));
 
         $res->execute();
+    }
+
+    function checkUser($email, $password): bool {
+        include_once("../connexion.php");
+
+        $select = "SELECT * FROM UTILISATEUR WHERE mail = :mail";
+        
+        $res = $db->prepare($select);
+        $res->bindValue(":mail", $email);
+        $res->execute();
+
+        $user = $res->fetch();
+
+        $password_same = password_verify($password, $user["password"]);
+
+        if($password_same) {
+            return true;
+        } else {
+            return false;
+        }
     }
 ?>
