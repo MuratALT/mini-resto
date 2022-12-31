@@ -1,0 +1,29 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: lightslategrey;
+    color: white;
+}
+
+#body_register header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+/* #body_register #submit_btn {
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+} */
